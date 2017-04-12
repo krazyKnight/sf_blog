@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <h1>Bienvenue sur mon super blog traitant de l'informatique</h1>
+    <p>Je m'appelle Mickaël et je suis développeur WEB</p>
+    <ul>
+        {% for article in articleList %}
+            <li><a href="{{ path('blog_article_view', {'slug':article.slug}) }}" title="{{ article.titre }}">{{ article.titre }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

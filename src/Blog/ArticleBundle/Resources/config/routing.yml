@@ -1,0 +1,11 @@
+blog_article_homepage:
+    path:     /{page}
+    defaults: { _controller: BlogArticleBundle:Default:index, page: 1 }
+
+blog_article_view:
+    path: /article/{slug}
+    defaults: { _controller: BlogArticleBundle:Default:view }
+
+add_post:
+    path:     /admin/addpost
+    defaults: { _controller: BlogArticleBundle:Admin:addPost }

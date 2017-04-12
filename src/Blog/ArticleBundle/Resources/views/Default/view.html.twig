@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    {% for message in app.session.flashbag.get('success') %}
+        <p class="alert alert-success">Message flash : {{ message }}</p>
+    {% endfor %}
+    <article>
+        <header>
+            <h1>{{ article.titre }}</h1>
+            <p>Ecrit par {{ article.auteur.nom }} {{ article.auteur.prenom }} le {{ article.datePublication | date('d/m/Y H:i:s') }}</p>
+        </header>
+        <section>
+            {{ article.contenu | raw }}
+        </section>
+        <footer>
+            <p>Article écrit dans la catégorie test</p>
+        </footer>
+    </article>
+{% endblock %}

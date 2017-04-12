@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}BlogArticleBundle:Admin:addPost{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un article</h1>
+    {% form_theme form 'BlogArticleBundle:Admin:form.html.twig' %}
+    {{ form(form) }}
+{% endblock %}

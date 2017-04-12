@@ -1,0 +1,9 @@
+login:
+    path:     /login
+    defaults: { _controller: BlogUserBundle:Default:login }
+
+login_check:
+    pattern:   /admin/login_check
+
+logout:
+    pattern: /admin/logout

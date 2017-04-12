@@ -1,0 +1,13 @@
+{% include '::partials/header.html.twig' %}
+            <header>
+                {% include '::partials/navbar.html.twig' %}
+            </header>
+            <section class="row">
+                <div class="col-md-8 col-sm-12">
+                    {% block body %}{% endblock %}
+                </div>
+                <aside class="col-md-4 col-sm-12">
+                    <p>Coucou je suis la sidebar</p>
+                </aside>
+            </section>
+{% include '::partials/footer.html.twig' %}
